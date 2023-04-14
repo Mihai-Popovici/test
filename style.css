@@ -1,0 +1,144 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: var(--nav-color) var(--nav-color);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--nav-color);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--nav-color);
+    border-radius: 8px;
+    border: 2px dashed var(--accent);
+  }
+
+:root
+{
+    --primary:#b1a9a2;
+    --bg-primary:#361719;
+    --accent: #c5a449;
+    --bg-color:#202022;
+    --nav-color: #170f17;
+    --space-between-nav-item:20px;
+    --nav-height:40px;
+}
+
+body{
+    font-size: 12pt;
+    font-family: 'Chivo Mono', monospace;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--primary);
+}
+
+nav{
+    width: 60%;
+    min-height:var(--nav-height);
+    background-color: var(--nav-color);
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a{
+    cursor:pointer;
+    padding-inline: var(--space-between-nav-item);
+}
+nav a:last-child{
+    padding-right: 120px;
+}
+
+
+nav a:hover{
+    color:var(--accent);
+}
+
+
+.paper-container{
+    position: relative;
+    margin-top: calc(var(--nav-height)*-1);
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    position:absolute;
+    transform: translateX(30px);
+    top:0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paper{
+    position: absolute;
+    width: 50%;
+    right:0;
+    overflow: hidden;
+}
+
+.paper img{
+    transform: translate(30px,-100px);
+}
+
+.top{
+    color: var(--accent);
+    margin-bottom: 0px;
+}
+
+.top, .bottom, p, h2{
+    margin-inline: 20px;
+}
+
+.bottom{
+    margin-top: 0;
+    color: var(--bg-primary);
+}
+
+p,h2{
+    padding-inline: 20px;
+}
+
+h2{
+    font-size: 10pt;
+    color: var(--accent);
+}
+
+.landing{
+    margin-top: var(--nav-height);
+}
+
+button{
+    font-family: 'Chivo Mono', monospace;
+    margin: 1rem;
+    padding: 0.5rem;
+    padding-inline: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.primary{
+    background-color: var(--bg-primary);
+    color: var(--accent);
+    border: none;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+}
+
+.primary:hover{
+    filter: brightness(1.5);
+}
+
